@@ -19,7 +19,22 @@ class ActivityDetailsCard extends StatelessWidget {
       ),
       itemBuilder: (context, index) {
         return CustomCard(
-          child: Container(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                healthDetails.healthData[index].icon,
+                size: 30,
+              ),
+              Text(
+                healthDetails.healthData[index].value,
+              ),
+              Text(
+                healthDetails.healthData[index].title,
+              ),
+            ],
+          ),
         );
       },
     );
