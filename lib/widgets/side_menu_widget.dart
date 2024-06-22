@@ -15,13 +15,12 @@ class _SideMenuWidgetState extends State<SideMenuWidget> {
   Widget build(BuildContext context) {
     final data = SideMenuData();
 
-    return Container(
-        child: ListView.builder(
+    return ListView.builder(
       itemCount: data.menu.length,
       itemBuilder: (context, index) {
         return buildMenuEntry(data, index);
       },
-    ));
+    );
   }
 
   Widget buildMenuEntry(SideMenuData data, int index) {
